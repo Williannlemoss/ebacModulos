@@ -1,0 +1,14 @@
+Expressões Lambda: São usadas principalmente para fornecer implementações de
+interfaces funcionais (interfaces que têm apenas um método abstrato). Elas são muito
+comuns em operações com streams e coleções.
+
+Expressões Normais: Podem ser usadas em qualquer lugar onde uma classe anônima é necessária,
+mas são mais verbosas. Isso pode incluir classes que implementam várias interfaces ou que
+precisam de vários métodos.
+
+As expressões lambda geralmente tornam o código mais legível e mais curto,
+especialmente em operações simples.
+
+As expressões lambda foram introduzidas no Java 8 para simplificar o trabalho com funções
+anônimas e melhorar a legibilidade do código. Elas são preferidas em muitos casos por serem
+mais concisas e claras
