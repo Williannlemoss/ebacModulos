@@ -1,0 +1,18 @@
+PostgreSQL, frequentemente chamado de Postgres, é um sistema de gerenciamento de
+banco de dados relacional de código aberto. Ele é conhecido por sua robustez,
+extensibilidade e suporte a padrões SQL. Algumas características notáveis incluem:
+
+Suporte a dados complexos: Além de dados relacionais, ele suporta tipos de dados avançados
+como JSON, XML e arrays.
+
+Transações ACID: Garante a integridade dos dados com suporte a transações atômicas,
+consistentes, isoladas e duráveis.
+
+Extensibilidade: Permite que usuários criem suas próprias funções e tipos de dados.
+
+Conformidade com SQL: Implementa muitos recursos do padrão SQL, facilitando a migração de
+outros sistemas.
+
+Comunidade ativa: Tem uma comunidade grande e ativa que contribui com extensões e melhorias.
+
+É amplamente utilizado em aplicações web, sistemas corporativos e muito mais.
