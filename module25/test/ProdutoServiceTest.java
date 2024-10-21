@@ -1,0 +1,57 @@
+import dao.IProdutoDAO;
+import dao.ProdutoDaoMock;
+import domain.Produto;
+import exception.TipoChaveNaoEncontradaException;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import services.IProdutoService;
+import services.ProdutoService;
+
+import java.math.BigDecimal;
+
+public class ProdutoServiceTest {
+
+	private final IProdutoService produtoService;
+	
+	private Produto produto;
+	
+	public ProdutoServiceTest() {
+		IProdutoDAO dao = new ProdutoDaoMock();
+		produtoService = new ProdutoService(dao);
+	}
+	
+	@Before
+	public void init() {
+		produto = new Produto();
+		produto.setCodigo("A1");
+		produto.setDescricao("Produto 1");
+		produto.setNome("Produto 1");
+		produto.setValor(BigDecimal.TEN);
+	}
+	
+	@Test
+	public void pesquisar() {
+		Produto produtor = this.produtoService.consultar(produto.getCodigo());
+		Assert.assertNotNull(produtor);
+	}
+	
+	@Test
+	public void salvar() throws TipoChaveNaoEncontradaException {
+		Boolean retorno = produtoService.cadastrar(produto);
+		Assert.assertTrue(retorno);
+	}
+	
+	@Test
+	public void excluir() {
+		produtoService.excluir(produto.getCodigo());
+	}
+	
+	@Test
+	public void alterarProduto() throws TipoChaveNaoEncontradaException {
+		produto.setNome("p3");
+		produtoService.alterar(produto);
+		
+		Assert.assertEquals("p3", produto.getNome());
+	}
+}
